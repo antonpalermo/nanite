@@ -1,4 +1,4 @@
-import createServer from "./server";
+import createServer from "@/server";
 
 async function main() {
   const server = await createServer();

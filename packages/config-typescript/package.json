@@ -1,0 +1,9 @@
+{
+  "name": "@packages/config-typescript",
+  "version": "1.0.0",
+  "private": true,
+  "files": [
+    "/config/**"
+  ],
+  "license": "MIT"
+}
