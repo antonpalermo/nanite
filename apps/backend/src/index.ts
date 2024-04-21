@@ -8,8 +8,17 @@ async function main() {
     return res.status(200).json({ status: "healthy", online: true });
   });
 
-  server.listen(port, () => {
+  const serverListener = server.listen(port, () => {
+    // TODO: improved loggin
     console.log(`Server Started on http://localhost:${port}`);
+  });
+
+  // graceful shutdown.
+  process.on("SIGTERM", () => {
+    console.log("SIGTERM signal recieved: Closing HTTP server");
+    serverListener.close(() => {
+      console.log("HTTP Server closed");
+    });
   });
 }
 
