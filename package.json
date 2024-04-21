@@ -1,0 +1,9 @@
+{
+  "name": "nanite",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "typescript": "^5.4.5"
+  }
+}
