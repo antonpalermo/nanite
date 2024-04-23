@@ -3,7 +3,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import express from "express";
 
-import { walletRoutes } from "@/routes";
+import { walletRoutes, transactionRoutes } from "@/routes";
 
 export default async function createServer() {
   const app = express();
@@ -17,7 +17,9 @@ export default async function createServer() {
     .use(express.json())
     .use(express.urlencoded({ extended: true }));
 
-  app.use("/wallet", walletRoutes());
+  app
+    .use("/wallet", walletRoutes())
+    .use("/transactions", transactionRoutes());
 
   return app;
 }
