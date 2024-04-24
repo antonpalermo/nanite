@@ -6,7 +6,9 @@
     "dev": "nodemon --exec \"node -r esbuild-register ./src/index.ts\" -e .ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "license": "MIT",
+  "dependencies": {
+    "@packages/global-database": "workspace:*"
+  },
   "devDependencies": {
     "@packages/config-typescript": "workspace:*",
     "@types/cors": "^2.8.17",
@@ -18,5 +20,6 @@
     "helmet": "^7.1.0",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.0"
-  }
+  },
+  "license": "MIT"
 }
