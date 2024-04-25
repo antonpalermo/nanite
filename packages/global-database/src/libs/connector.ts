@@ -5,7 +5,10 @@ export async function initializeMongoConnection() {
     console.log("Initializing MongoDB Connection");
 
     await connect(process.env.MONGO_CONNECTION || "", {
+      dbName: "nanite-sg1",
       appName: "main-cluster",
+      retryWrites: true,
+      writeConcern: { w: "majority" },
     });
 
     mongoose.connection.on("connected", () => {

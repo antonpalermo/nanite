@@ -2,9 +2,16 @@
   "name": "@packages/global-database",
   "version": "1.0.0",
   "private": true,
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./models": {
+      "default": "./dist/models/index.js",
+      "types": "./dist/models/index.d.ts"
+    }
+  },
   "scripts": {
     "build": "pnpm run clean && tsup",
     "clean": "rm -rf dist",
