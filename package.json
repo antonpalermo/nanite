@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "@types/node": "^20.12.7",
+    "dotenv-cli": "^7.4.1",
     "typescript": "^5.4.5"
   }
 }
