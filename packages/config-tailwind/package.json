@@ -1,5 +1,5 @@
 {
-  "name": "config-tailwind",
+  "name": "@packages/config-tailwind",
   "version": "1.0.0",
   "private": true,
   "exports": {
