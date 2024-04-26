@@ -1,0 +1,13 @@
+{
+  "name": "config-tailwind",
+  "version": "1.0.0",
+  "private": true,
+  "exports": {
+    ".": "./configs/base.tailwindcss.ts"
+  },
+  "devDependencies": {
+    "@packages/config-typescript": "workspace:*",
+    "tailwindcss": "^3.4.3"
+  },
+  "license": "MIT"
+}
