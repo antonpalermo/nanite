@@ -3,7 +3,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import express from "express";
 
-import { ExpressAuth } from "@auth/express";
+// import { ExpressAuth } from "@auth/express";
 
 import { walletRoutes, transactionRoutes } from "@/routes";
 
@@ -21,7 +21,7 @@ export default async function createServer() {
     .use(express.urlencoded({ extended: true }));
 
   app
-    .use("/auth/*", ExpressAuth({ providers: [] }))
+    // .use("/auth/*", ExpressAuth({ providers: [] }))
     .use("/wallet", walletRoutes())
     .use("/transactions", transactionRoutes());
 

@@ -10,8 +10,11 @@ export function transactionRoutes() {
         amount: 500,
         recipient: "this should be an id",
       });
-    } catch (error) {}
-    return res.status(200).json({ message: "feature not yet implemented." });
+      return res.status(200).json(transaction);
+    } catch (error) {
+      // TODO: add logger here.
+      console.log(error);
+    }
   });
 
   return router;
