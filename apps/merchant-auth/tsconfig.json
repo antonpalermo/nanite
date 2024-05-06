@@ -1,0 +1,10 @@
+{
+  "extends": "@packages/config-typescript/configs/base.config.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
