@@ -10,18 +10,23 @@ import AuthRootLayout from "@/components/user/auth-layout";
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
-  },
-  {
-    path: "/user",
-    element: <AuthRootLayout />,
     children: [
-      { path: "sign-in", element: <SignIn /> },
-      { path: "sign-up", element: <SignUp /> },
+      {
+        index: true,
+        element: <App />,
+      },
+      {
+        path: "/user",
+        element: <AuthRootLayout />,
+        children: [
+          { path: "sign-in", element: <SignIn /> },
+          { path: "sign-up", element: <SignUp /> },
+        ],
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
     ],
-  },
-  {
-    path: "/dashboard",
-    element: <Dashboard />,
   },
 ]);
