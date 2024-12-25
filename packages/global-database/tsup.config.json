@@ -1,8 +1,0 @@
-{
-  "entry": ["./src/index.ts", "./src/models/index.ts"],
-  "format": ["cjs", "esm"],
-  "clean": true,
-  "sourcemap": true,
-  "minify": true,
-  "dts": true
-}
